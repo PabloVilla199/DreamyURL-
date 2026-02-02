@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>EmptyDefaultConstructor:Exceptions.kt$MessagueQueueException$()</ID>
+    <ID>LongParameterList:ClickEvent.kt$ClickEvent$( shortUrlId: String = this.shortUrlId, ip: String? = this.ip, referrer: String? = this.referrer, browser: String? = this.browser, platform: String? = this.platform, timestamp: Instant = this.timestamp, country: String? = this.country )</ID>
+    <ID>LongParameterList:ClickEvent.kt$ClickEvent$( val shortUrlId: String, val ip: String?, val referrer: String?, val browser: String?, val platform: String?, val timestamp: Instant, val country: String? )</ID>
+    <ID>MagicNumber:GenerateQrUseCase.kt$GenerateQrUseCaseImpl$1000</ID>
+    <ID>MagicNumber:GenerateQrUseCase.kt$GenerateQrUseCaseImpl$2048</ID>
+    <ID>MatchingDeclarationName:CreateShortUrlCaseAsyncTest.kt$CreateShortUrlUseCaseAsyncTest</ID>
+    <ID>MaxLineLength:CreateShortUrlUseCase.kt$CreateShortUrlUseCase$*</ID>
+    <ID>MaxLineLength:CreateShortUrlUseCase.kt$CreateShortUrlUseCaseImpl.&lt;no name provided&gt;$override fun getStatus(): RateLimitStatus</ID>
+    <ID>MaxLineLength:Exceptions.kt$UnsupportedQrFormatException$DomainException("Requested format '$requestedFormat' is not supported. Supported formats: ${supportedFormats.joinToString()}")</ID>
+    <ID>NewLineAtEndOfFile:ClickInfo.kt$es.unizar.urlshortener.core.ClickInfo.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateShortUrlCaseAsyncTest.kt$es.unizar.urlshortener.core.usecases.CreateShortUrlCaseAsyncTest.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateShortUrlUseCase.kt$es.unizar.urlshortener.core.usecases.CreateShortUrlUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateShortUrlUseCaseTest.kt$es.unizar.urlshortener.core.usecases.CreateShortUrlUseCaseTest.kt</ID>
+    <ID>NewLineAtEndOfFile:Domain.kt$es.unizar.urlshortener.core.Domain.kt</ID>
+    <ID>NewLineAtEndOfFile:GenerateQrUseCase.kt$es.unizar.urlshortener.core.usecases.GenerateQrUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GenerateQrUseCaseTest.kt$es.unizar.urlshortener.core.usecases.GenerateQrUseCaseTest.kt</ID>
+    <ID>NewLineAtEndOfFile:MessageContractTest.kt$es.unizar.urlshortener.core.MessageContractTest.kt</ID>
+    <ID>ReturnCount:CreateShortUrlUseCase.kt$CreateShortUrlUseCaseImpl$override fun finalizeIfSafe(jobId: String): es.unizar.urlshortener.core.UrlValidationJob</ID>
+    <ID>TooGenericExceptionCaught:CreateShortUrlUseCase.kt$CreateShortUrlUseCaseImpl$e: Throwable</ID>
+    <ID>UnusedPrivateProperty:CreateShortUrlUseCase.kt$CreateShortUrlUseCaseImpl$private val rateLimiterService: RateLimiterService = object : RateLimiterService { override fun tryConsume(): Boolean = true override fun getStatus(): RateLimitStatus = RateLimitStatus(Long.MAX_VALUE, java.time.OffsetDateTime.now(), false) }</ID>
+    <ID>WildcardImport:CreateShortUrlCaseAsyncTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:CreateShortUrlCaseAsyncTest.kt$import org.mockito.kotlin.*</ID>
+    <ID>WildcardImport:CreateShortUrlUseCaseTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:GenerateQrUseCaseTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:GenerateQrUseCaseTest.kt$import org.mockito.kotlin.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:IntegrationTest.kt$IntegrationTest$private fun handleAsyncResponse(creationResponse: ResponseEntity&lt;Map&lt;*, *&gt;&gt;, originalUrl: String): ResponseEntity&lt;ShortUrlDataOut&gt;</ID>
+    <ID>LongParameterList:ApplicationConfiguration.kt$ApplicationConfiguration$( urlValidationJobService: UrlValidationJobService, urlSafeBrowsingService: UrlSafeBrowsingService, urlReachabilityService: UrlReachabilityService, objectMapper: ObjectMapper, @Value("\${safebrowsing.rabbitQueue}") queueName: String, @Value("\${resilience4j.retry.safebrowsing.max-attempts}") maxAttempts: Int, @Value("\${resilience4j.retry.safebrowsing.wait-duration}") waitDuration: String, rateLimiterService: RateLimiterService, )</ID>
+    <ID>LongParameterList:GeoServiceImpl.kt$GeoServiceImpl$( private val webClient: WebClient, private val redisTemplate: StringRedisTemplate, private val clickRepository: ClickRepository, private val statsRepository: StatsRepository, @param:Value("\${geo.provider.base-url}") private val primaryBaseUrl: String, @param:Value("\${geo.provider.path}") private val providerPath: String, @param:Value("\${geo.provider.api-key}") private val apiKey: String, @param:Value("\${geo.provider.timeout-ms}") private val timeoutMs: Long, @param:Value("\${geo.cache-ttl-days}") private val cacheTtlDays: Long, @param:Value("\${geo.unknown-ttl-minutes:60}") private val unknownTtlMinutes: Long, @param:Value("\${geo.fallback.base-url:http://ip-api.com}") private val fallbackBaseUrl: String, @param:Value("\${geo.fallback.path:/json/{ip}}") private val fallbackPath: String, )</ID>
+    <ID>MagicNumber:AsyncConfig.kt$AsyncConfig$100</ID>
+    <ID>MagicNumber:AsyncConfig.kt$AsyncConfig$5</ID>
+    <ID>MagicNumber:GeoClientConfig.kt$GeoClientConfig$1024</ID>
+    <ID>MagicNumber:GeoClientConfig.kt$GeoClientConfig$1500</ID>
+    <ID>MagicNumber:GeoServiceImpl.kt$GeoServiceImpl$16</ID>
+    <ID>MagicNumber:GeoServiceImpl.kt$GeoServiceImpl$31</ID>
+    <ID>MaxLineLength:ApplicationConfiguration.kt$ApplicationConfiguration$fun</ID>
+    <ID>MaxLineLength:GeoServiceImplTest.kt$GeoServiceImplTest$primaryBaseUrl</ID>
+    <ID>MaxLineLength:IntegrationTest.kt$IntegrationTest$private</ID>
+    <ID>NestedBlockDepth:IntegrationTest.kt$IntegrationTest$private fun handleAsyncResponse(creationResponse: ResponseEntity&lt;Map&lt;*, *&gt;&gt;, originalUrl: String): ResponseEntity&lt;ShortUrlDataOut&gt;</ID>
+    <ID>NewLineAtEndOfFile:ApplicationConfiguration.kt$es.unizar.urlshortener.ApplicationConfiguration.kt</ID>
+    <ID>NewLineAtEndOfFile:IntegrationTest.kt$es.unizar.urlshortener.IntegrationTest.kt</ID>
+    <ID>ReturnCount:GeoServiceImpl.kt$GeoServiceImpl$private fun resolveCountry(ipAddress: String?): String</ID>
+    <ID>ReturnCount:GeoServiceImpl.kt$GeoServiceImpl$private fun resolveDetails(ip: String): GeoLookupResult</ID>
+    <ID>ReturnCount:IntegrationTest.kt$IntegrationTest$private fun handleAsyncResponse(creationResponse: ResponseEntity&lt;Map&lt;*, *&gt;&gt;, originalUrl: String): ResponseEntity&lt;ShortUrlDataOut&gt;</ID>
+    <ID>TooGenericExceptionCaught:GeoServiceImpl.kt$GeoServiceImpl$ex: Exception</ID>
+    <ID>TooManyFunctions:ApplicationConfiguration.kt$ApplicationConfiguration</ID>
+    <ID>UnusedParameter:IntegrationTest.kt$IntegrationTest$originalUrl: String</ID>
+    <ID>UnusedPrivateMember:GeoServiceImpl.kt$GeoServiceImpl$private fun resolveCountry(ipAddress: String?): String</ID>
+    <ID>UnusedPrivateProperty:GeoClientConfig.kt$GeoClientConfig$@Value("\${geo.provider.timeout-ms}") private var timeoutMs: Long = 1500</ID>
+    <ID>UseCheckOrError:IntegrationTest.kt$IntegrationTest$throw IllegalStateException("Job failed with status: $status")</ID>
+    <ID>UseCheckOrError:IntegrationTest.kt$IntegrationTest$throw IllegalStateException("Validation job $jobId did not finalize in time")</ID>
+  </CurrentIssues>
+</SmellBaseline>

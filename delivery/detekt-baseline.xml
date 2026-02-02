@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:UrlShortenerController.kt$UrlShortenerControllerImpl$@Operation(summary = "Get Validation job status", description = "Query the status of an asynchronous validation job by id", tags = ["Validation"]) @ApiResponses( value = [ ApiResponse( responseCode = "200", description = "Job status", content = [Content(mediaType = "application/json", schema = Schema(implementation = es.unizar.urlshortener.core.UrlValidationJob::class))] ), ApiResponse( responseCode = "404", description = "Job not found", content = [Content()] ) ] ) @GetMapping("/api/validation/job/{jobId}") override fun getValidationJob( @Parameter(description = "The job identifier", example = "123e4567-e89b-12d3-a456-426614174000") @PathVariable jobId: String, request: HttpServletRequest ): ResponseEntity&lt;Any?&gt;</ID>
+    <ID>LongMethod:PortsImpl.kt$UrlReachabilityServiceImpl$private fun performRequest(url: String, method: String): ReachabilityCheckResult</ID>
+    <ID>LongMethod:UrlShortenerController.kt$UrlShortenerControllerImpl$@Operation(summary = "Get Validation job status", description = "Query the status of an asynchronous validation job by id", tags = ["Validation"]) @ApiResponses( value = [ ApiResponse( responseCode = "200", description = "Job status", content = [Content(mediaType = "application/json", schema = Schema(implementation = es.unizar.urlshortener.core.UrlValidationJob::class))] ), ApiResponse( responseCode = "404", description = "Job not found", content = [Content()] ) ] ) @GetMapping("/api/validation/job/{jobId}") override fun getValidationJob( @Parameter(description = "The job identifier", example = "123e4567-e89b-12d3-a456-426614174000") @PathVariable jobId: String, request: HttpServletRequest ): ResponseEntity&lt;Any?&gt;</ID>
+    <ID>LongParameterList:QueuqeWorker.kt$UrlValidationWorkerServiceImpl$( private val urlValidationJobService: UrlValidationJobService, private val urlSafeBrowsingService: UrlSafeBrowsingService, private val urlReachabilityService: UrlReachabilityService, private val objectMapper: ObjectMapper, @param:Value("\${safebrowsing.rabbitQueue}") private val queueName: String, @param:Value("\${resilience4j.retry.safebrowsing.max-attempts}") private val maxAttempts: Int, @param:Value("\${resilience4j.retry.safebrowsing.wait-duration}") private val waitDuration: String, private val rateLimiterService: RateLimiterService )</ID>
+    <ID>LongParameterList:UrlShortenerController.kt$UrlShortenerControllerImpl$( val redirectUseCase: RedirectUseCase, val logClickUseCase: LogClickUseCase, val createShortUrlUseCase: CreateShortUrlUseCase, val generateQrUseCase: GenerateQrUseCase, val getStatsUseCase: GetStatsUseCase, private val applicationEventPublisher: ApplicationEventPublisher, private val urlValidationJobService: UrlValidationJobService, private val shortUrlRepository: es.unizar.urlshortener.core.ShortUrlRepositoryService, private val hashService: es.unizar.urlshortener.core.HashService )</ID>
+    <ID>MagicNumber:AnalyticsService.kt$AnalyticsService$10.0</ID>
+    <ID>MagicNumber:AnalyticsService.kt$AnalyticsService$1000.0</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$200</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$299</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$300</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$399</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$405</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlReachabilityServiceImpl$501</ID>
+    <ID>MagicNumber:PortsImpl.kt$UrlSafeBrowsingServiceImpl$5</ID>
+    <ID>MagicNumber:QueuqeWorker.kt$UrlValidationWorkerServiceImpl$1000</ID>
+    <ID>MagicNumber:UrlShortenerController.kt$UrlShortenerControllerImpl$1000</ID>
+    <ID>MagicNumber:UrlShortenerController.kt$UrlShortenerControllerImpl$200</ID>
+    <ID>MagicNumber:UrlShortenerController.kt$UrlShortenerControllerImpl$443</ID>
+    <ID>MagicNumber:UrlShortenerController.kt$UrlShortenerControllerImpl$80</ID>
+    <ID>MatchingDeclarationName:RateLimiter.kt$RateLimiterServiceImpl : RateLimiterService</ID>
+    <ID>MatchingDeclarationName:RateLimiterTest.kt$RateLimiterServiceImplTest</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$EnqueueRequest$data</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$SafeBrowsingApiController$@PostMapping(path = ["/check"], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$SafeBrowsingApiController$@PostMapping(path = ["/enqueue"], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$SafeBrowsingApiController$fun</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$SafeBrowsingApiController$return ResponseEntity.ok(RateLimitDTO(remainingTokens = 100, resetTime = "2025-11-26T12:00:00Z", isLimitExceeded = false))</ID>
+    <ID>MaxLineLength:SafeBrowsingApiController.kt$UrlCheckRequest$data</ID>
+    <ID>MaxLineLength:SafeBrowsingDocsController.kt$SafeBrowsingDocsController$@Operation(description = " endpoint that mirrors Google Safe Browsing v4 threatMatches:find request and response schemas.")</ID>
+    <ID>MaxLineLength:SafeBrowsingDocsController.kt$SafeBrowsingDocsController$@PostMapping(path = ["/v4/threatMatches:find"], consumes = [MediaType.APPLICATION_JSON_VALUE], produces = [MediaType.APPLICATION_JSON_VALUE])</ID>
+    <ID>MaxLineLength:SafeBrowsingDocsController.kt$SafeBrowsingDocsController$fun</ID>
+    <ID>MaxLineLength:SafeBrowsingDocsController.kt$ThreatEntry$data</ID>
+    <ID>MaxLineLength:UrlShortenerController.kt$UrlShortenerControllerImpl$@Operation(summary = "Get QR code for a short URL", description = "Returns a QR code image that links to the short URL")</ID>
+    <ID>MaxLineLength:UrlShortenerController.kt$UrlShortenerControllerImpl$@Operation(summary = "Get Validation job status", description = "Query the status of an asynchronous validation job by id", tags = ["Validation"])</ID>
+    <ID>MaxLineLength:UrlShortenerController.kt$UrlShortenerControllerImpl$@io.swagger.v3.oas.annotations.responses.ApiResponse(responseCode = "200", description = "QR code image", content = [io.swagger.v3.oas.annotations.media.Content(mediaType = "image/png")])</ID>
+    <ID>MaxLineLength:UrlShortenerController.kt$UrlShortenerControllerImpl$content = [Content(mediaType = "application/json", schema = Schema(implementation = es.unizar.urlshortener.core.UrlValidationJob::class))]</ID>
+    <ID>MaxLineLength:UrlShortenerController.kt$UrlShortenerControllerImpl$redirection = es.unizar.urlshortener.core.Redirection(job.url, es.unizar.urlshortener.core.RedirectionType.Temporary)</ID>
+    <ID>MaxLineLength:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$// pero si CreateShortUrlUseCase lanza la excepción síncronamente (por alguna razón), el controller debe manejarla.</ID>
+    <ID>NewLineAtEndOfFile:ClickEventListener.kt$es.unizar.urlshortener.infrastructure.delivery.ClickEventListener.kt</ID>
+    <ID>NewLineAtEndOfFile:ClickEventListenerTest.kt$es.unizar.urlshortener.infrastructure.delivery.ClickEventListenerTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ExceptionHandlers.kt$es.unizar.urlshortener.infrastructure.delivery.ExceptionHandlers.kt</ID>
+    <ID>NewLineAtEndOfFile:PortsImpl.kt$es.unizar.urlshortener.infrastructure.delivery.PortsImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:QueuqeWorker.kt$es.unizar.urlshortener.infrastructure.delivery.QueuqeWorker.kt</ID>
+    <ID>NewLineAtEndOfFile:RateLimiter.kt$es.unizar.urlshortener.infrastructure.delivery.RateLimiter.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlReachabilityServiceImplTest.kt$es.unizar.urlshortener.infrastructure.delivery.UrlReachabilityServiceImplTest.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlSafeBrowsingServiceImplTest.kt$es.unizar.urlshortener.infrastructure.delivery.UrlSafeBrowsingServiceImplTest.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlShortenerController.kt$es.unizar.urlshortener.infrastructure.delivery.UrlShortenerController.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlShortenerControllerTest.kt$es.unizar.urlshortener.infrastructure.delivery.UrlShortenerControllerTest.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlValidationJobServiceImplTest.kt$es.unizar.urlshortener.infrastructure.delivery.UrlValidationJobServiceImplTest.kt</ID>
+    <ID>NewLineAtEndOfFile:UrlValidationWorkerServiceImplTest.kt$es.unizar.urlshortener.infrastructure.delivery.UrlValidationWorkerServiceImplTest.kt</ID>
+    <ID>PrintStackTrace:PortsImpl.kt$UrlValidationJobServiceImpl$e</ID>
+    <ID>ReturnCount:UrlShortenerController.kt$UrlShortenerControllerImpl$@Operation(summary = "Get Validation job status", description = "Query the status of an asynchronous validation job by id", tags = ["Validation"]) @ApiResponses( value = [ ApiResponse( responseCode = "200", description = "Job status", content = [Content(mediaType = "application/json", schema = Schema(implementation = es.unizar.urlshortener.core.UrlValidationJob::class))] ), ApiResponse( responseCode = "404", description = "Job not found", content = [Content()] ) ] ) @GetMapping("/api/validation/job/{jobId}") override fun getValidationJob( @Parameter(description = "The job identifier", example = "123e4567-e89b-12d3-a456-426614174000") @PathVariable jobId: String, request: HttpServletRequest ): ResponseEntity&lt;Any?&gt;</ID>
+    <ID>ReturnCount:UrlShortenerController.kt$UrlShortenerControllerImpl$private fun determineFormat(formatParam: String?, acceptHeader: String?): QrFormat</ID>
+    <ID>SwallowedException:PortsImpl.kt$UrlReachabilityServiceImpl$e: Exception</ID>
+    <ID>SwallowedException:PortsImpl.kt$UrlReachabilityServiceImpl$e: HttpTimeoutException</ID>
+    <ID>SwallowedException:PortsImpl.kt$UrlReachabilityServiceImpl$e: UnknownHostException</ID>
+    <ID>SwallowedException:PortsImpl.kt$UrlSafeBrowsingServiceImpl$e: Exception</ID>
+    <ID>ThrowsCount:UrlShortenerController.kt$UrlShortenerControllerImpl$private fun parseSizeParameter(sizeParam: String?): Pair&lt;Int, Int&gt;</ID>
+    <ID>TooGenericExceptionCaught:ClickEventListener.kt$ClickEventListener$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:PortsImpl.kt$QrCodeServiceImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PortsImpl.kt$UrlReachabilityServiceImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PortsImpl.kt$UrlSafeBrowsingServiceImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PortsImpl.kt$UrlValidationJobServiceImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:QueuqeWorker.kt$UrlValidationWorkerServiceImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:UrlShortenerController.kt$UrlShortenerControllerImpl$e: Exception</ID>
+    <ID>TooManyFunctions:ExceptionHandlers.kt$ExceptionHandlers : ResponseEntityExceptionHandler</ID>
+    <ID>UnusedParameter:PortsImpl.kt$QrCodeServiceImpl$size: Int</ID>
+    <ID>UnusedParameter:SafeBrowsingApiController.kt$SafeBrowsingApiController$@PathVariable jobId: String</ID>
+    <ID>UnusedParameter:SafeBrowsingApiController.kt$SafeBrowsingApiController$@RequestBody(description = "Message to enqueue") req: EnqueueRequest</ID>
+    <ID>UnusedParameter:SafeBrowsingApiController.kt$SafeBrowsingApiController$@RequestBody(description = "New status") req: UpdateStatusRequest</ID>
+    <ID>UnusedParameter:SafeBrowsingApiController.kt$SafeBrowsingApiController$@RequestBody(description = "URL to check") req: UrlCheckRequest</ID>
+    <ID>UnusedParameter:SafeBrowsingDocsController.kt$SafeBrowsingDocsController$@RequestBody(description = "ThreatMatchesRequest", required = true) request: ThreatMatchesRequest</ID>
+    <ID>UnusedPrivateMember:UrlShortenerController.kt$UrlShortenerControllerImpl$private fun isPrivateIp(ip: String): Boolean</ID>
+    <ID>UnusedPrivateProperty:QueuqeWorker.kt$UrlValidationWorkerServiceImpl$@param:Value("\${safebrowsing.rabbitQueue}") private val queueName: String</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$// Necesario porque ExceptionHandler lo usa aunque no se llame directamente aquí @MockitoBean private lateinit var urlSafeBrowsingService: UrlSafeBrowsingService</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$// [MODIFICADO] Inyectamos el servicio de Jobs en lugar del servicio puro de seguridad @MockitoBean private lateinit var urlValidationJobService: UrlValidationJobService</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$@MockitoBean private lateinit var applicationEventPublisher: ApplicationEventPublisher</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$@MockitoBean private lateinit var hashService: es.unizar.urlshortener.core.HashService</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$@MockitoBean private lateinit var logClickUseCase: LogClickUseCase</ID>
+    <ID>UnusedPrivateProperty:UrlShortenerControllerTest.kt$UrlShortenerControllerTest$@MockitoBean private lateinit var shortUrlRepository: es.unizar.urlshortener.core.ShortUrlRepositoryService</ID>
+    <ID>UnusedPrivateProperty:UrlValidationWorkerServiceImplTest.kt$UrlValidationWorkerServiceImplTest$val result = workerService.processMessage(message)</ID>
+    <ID>UseRequire:PortsImpl.kt$UrlValidationJobServiceImpl$throw IllegalArgumentException("El esquema de la URL no es válido")</ID>
+    <ID>WildcardImport:AnalyticsService.kt$import es.unizar.urlshortener.infrastructure.delivery.dto.*</ID>
+    <ID>WildcardImport:GeolocationAnalyticsController.kt$import es.unizar.urlshortener.infrastructure.delivery.dto.*</ID>
+    <ID>WildcardImport:GeolocationAnalyticsControllerTest.kt$import es.unizar.urlshortener.infrastructure.delivery.dto.*</ID>
+    <ID>WildcardImport:GeolocationAnalyticsControllerTest.kt$import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*</ID>
+    <ID>WildcardImport:QueuqeWorker.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:RateLimiterTest.kt$import org.junit.jupiter.api.Assertions.*</ID>
+    <ID>WildcardImport:SafeBrowsingApiController.kt$import org.springframework.web.bind.annotation.*</ID>
+    <ID>WildcardImport:UrlReachabilityServiceImplTest.kt$import org.junit.jupiter.api.Assertions.*</ID>
+    <ID>WildcardImport:UrlReachabilityServiceImplTest.kt$import org.mockito.kotlin.*</ID>
+    <ID>WildcardImport:UrlSafeBrowsingServiceImplTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:UrlSafeBrowsingServiceImplTest.kt$import org.junit.jupiter.api.Assertions.*</ID>
+    <ID>WildcardImport:UrlValidationJobServiceImplTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:UrlValidationJobServiceImplTest.kt$import org.junit.jupiter.api.Assertions.*</ID>
+    <ID>WildcardImport:UrlValidationWorkerServiceImplTest.kt$import es.unizar.urlshortener.core.*</ID>
+    <ID>WildcardImport:UrlValidationWorkerServiceImplTest.kt$import org.mockito.kotlin.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

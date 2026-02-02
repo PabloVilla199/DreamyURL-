@@ -1,0 +1,74 @@
+spring:
+  datasource:
+    url: jdbc:hsqldb:mem:.
+    username: sa
+    password:
+    driverClassName: org.hsqldb.jdbc.JDBCDriver
+  jpa:
+    open-in-view: false
+  config:
+    import:
+      - optional:file:.env[.properties]
+      - optional:file:src/.env[.properties]
+      - optional:classpath:.env[.properties]
+  
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: -1ms
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+geo:
+  provider:
+    base-url: https://ipapi.co
+    path: /{ip}/json/
+    api-key: ${GEO_API_KEY:}
+    timeout-ms: 5000
+  cache-ttl-days: 7
+  unknown-ttl-minutes: 60
+  fallback:
+    base-url: http://ip-api.com
+    path: /json/{ip}
+
+safebrowsing:
+  apiKey: ${SAFEBROWSING_API_KEY}
+  apiUrl: ${SAFEBROWSING_API_URL}
+  rabbitQueue: ${SAFEBROWSING_RABBIT_QUEUE:nqq-check}        
+  resultQueue: ${SAFEBROWSING_RESULT_QUEUE:nqq-result}
+
+  ratelimit:
+    bucketKey: safebrowsing:global
+    perSecondCapacity: 200
+    perSecondRefillTokens: 200
+    perSecondRefillSeconds: 1
+
+reachability:
+  timeoutMillis: 5000
+  cache:
+    enabled: ${REACHABILITY_CACHE_ENABLED:true}
+    ttl-minutes: ${REACHABILITY_CACHE_TTL:10}
+
+resilience4j.retry:
+  safebrowsing:
+    max-attempts: 3
+    wait-duration: 2s
+    retry-exceptions:
+      - java.io.IOException
+      - java.net.ConnectException
+

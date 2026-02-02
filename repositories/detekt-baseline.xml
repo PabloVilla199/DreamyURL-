@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>LongParameterList:Entities.kt$ClickEntity$( @Id @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null, val hash: String, val created: OffsetDateTime, val ip: String?, val referrer: String?, val browser: String?, val platform: String?, val country: String? )</ID>
+    <ID>MagicNumber:PortsImpl.kt$QrCodeRepositoryServiceImpl$24</ID>
+    <ID>MaxLineLength:RedisStatsRepository.kt$RedisStatsRepository$val cities = redisTemplate.opsForHash&lt;String, String&gt;().entries(urlCitiesKey(shortUrlId)).mapValues { it.value.toLong() }</ID>
+    <ID>MaxLineLength:RedisStatsRepository.kt$RedisStatsRepository$val countries = redisTemplate.opsForHash&lt;String, String&gt;().entries(systemCountriesKey).mapValues { it.value.toLong() }</ID>
+    <ID>MaxLineLength:RedisStatsRepository.kt$RedisStatsRepository$val countries = redisTemplate.opsForHash&lt;String, String&gt;().entries(urlCountriesKey(shortUrlId)).mapValues { it.value.toLong() }</ID>
+    <ID>MaxLineLength:Repositories.kt$ClickEntityRepository$@Query("SELECT c.browser, COUNT(c) FROM ClickEntity c WHERE c.hash = :hash AND c.browser IS NOT NULL GROUP BY c.browser")</ID>
+    <ID>MaxLineLength:Repositories.kt$ClickEntityRepository$@Query("SELECT c.country, COUNT(c) FROM ClickEntity c WHERE c.hash = :hash AND c.country IS NOT NULL GROUP BY c.country")</ID>
+    <ID>MaxLineLength:Repositories.kt$ClickEntityRepository$@Query("SELECT c.platform, COUNT(c) FROM ClickEntity c WHERE c.hash = :hash AND c.platform IS NOT NULL GROUP BY c.platform")</ID>
+    <ID>NewLineAtEndOfFile:Converters.kt$es.unizar.urlshortener.infrastructure.repositories.Converters.kt</ID>
+    <ID>NewLineAtEndOfFile:PortsImpl.kt$es.unizar.urlshortener.infrastructure.repositories.PortsImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:RedisClickRepositoryTest.kt$es.unizar.urlshortener.infrastructure.repositories.RedisClickRepositoryTest.kt</ID>
+    <ID>SwallowedException:RedisClickRepository.kt$RedisClickRepository$ex: Exception</ID>
+    <ID>TooGenericExceptionCaught:RedisClickRepository.kt$RedisClickRepository$ex: Exception</ID>
+    <ID>TooManyFunctions:RedisStatsRepository.kt$RedisStatsRepository : StatsRepository</ID>
+  </CurrentIssues>
+</SmellBaseline>
